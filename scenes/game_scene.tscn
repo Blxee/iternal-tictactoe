@@ -22,7 +22,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="AspectRatioContainer"]
-modulate = Color(0.1911, 0.91, 0.790183, 1)
+modulate = Color(0.1547, 0.519762, 0.91, 1)
 layout_mode = 2
 texture = ExtResource("1_dvuco")
 
