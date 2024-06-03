@@ -2,7 +2,7 @@
 class_name Square
 extends Button
 
-signal mark_pressed(spuare: Square, index: int)
+signal mark_pressed(square: Square, index: int)
 
 @export_enum('NONE', 'X', 'O') var mark: int = Mark.NONE:
 	set(value):

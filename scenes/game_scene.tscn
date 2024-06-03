@@ -1,10 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0jgunbwndq1l"]
+[gd_scene load_steps=4 format=3 uid="uid://c0jgunbwndq1l"]
 
 [ext_resource type="Texture2D" uid="uid://cfdef4b5pfqja" path="res://assets/images/tictac_board.svg" id="1_dvuco"]
 [ext_resource type="Script" path="res://scripts/game_scene.gd" id="1_jdaub"]
-[ext_resource type="Texture2D" uid="uid://bt8yq1puaq7q" path="res://assets/images/tictac_x.svg" id="2_381i8"]
 [ext_resource type="PackedScene" uid="uid://d0wkvesmmgfam" path="res://scenes/square.tscn" id="2_limhx"]
-[ext_resource type="Texture2D" uid="uid://b5ew17x1k0c08" path="res://assets/images/tictac_o.svg" id="5_82mvq"]
 
 [node name="GameScene" type="Control"]
 layout_mode = 3
@@ -41,27 +39,49 @@ columns = 3
 
 [node name="Square" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
 layout_mode = 2
-
-[node name="TextureRect2" type="TextureRect" parent="AspectRatioContainer/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(280, 280)
-layout_mode = 2
-size_flags_horizontal = 6
-texture = ExtResource("2_381i8")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="TextureRect3" type="TextureRect" parent="AspectRatioContainer/MarginContainer/GridContainer"]
-custom_minimum_size = Vector2(280, 280)
-layout_mode = 2
-size_flags_horizontal = 10
-texture = ExtResource("2_381i8")
-expand_mode = 1
-stretch_mode = 5
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
 [node name="Square2" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
 layout_mode = 2
-icon = ExtResource("5_82mvq")
-mark = 2
+size_flags_vertical = 2
 
 [node name="Square3" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
 layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 2
+
+[node name="Square4" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Square5" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
+layout_mode = 2
+
+[node name="Square6" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="Square7" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 10
+
+[node name="Square8" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Square9" parent="AspectRatioContainer/MarginContainer/GridContainer" instance=ExtResource("2_limhx")]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 10
+
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square" to="." method="_on_mark_pressed"]
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square2" to="." method="_on_mark_pressed"]
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square3" to="." method="_on_mark_pressed"]
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square4" to="." method="_on_mark_pressed"]
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square5" to="." method="_on_mark_pressed"]
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square6" to="." method="_on_mark_pressed"]
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square7" to="." method="_on_mark_pressed"]
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square8" to="." method="_on_mark_pressed"]
+[connection signal="mark_pressed" from="AspectRatioContainer/MarginContainer/GridContainer/Square9" to="." method="_on_mark_pressed"]
