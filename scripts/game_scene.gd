@@ -12,6 +12,8 @@ func _on_mark_pressed(square: Square, index: int) -> void:
 		if stack.size() > 6:
 			var front: Square = stack.pop_front()
 			front.mark = Square.Mark.NONE
+		if stack.size() == 6:
+			stack.front().dimmed = true
 
 
 func _swap_turn() -> void:

@@ -9,8 +9,15 @@ signal mark_pressed(square: Square, index: int)
 		match value:
 			Mark.X: icon = x_texture
 			Mark.O: icon = o_texture
-			Mark.NONE: icon = null
+			Mark.NONE:
+				icon = null
+				dimmed = false
 		mark = value
+
+var dimmed := false:
+	set(value):
+		modulate.a = 0.3 + 0.7 * int(not value)
+		dimmed = value
 
 @export_group('Textures')
 @export var x_texture: Texture = preload('res://assets/images/tictac_x.svg')
