@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://d0wkvesmmgfam"]
+
+[ext_resource type="Texture2D" uid="uid://b5ew17x1k0c08" path="res://assets/images/tictac_o.svg" id="1_3n3go"]
+[ext_resource type="Script" path="res://scripts/square.gd" id="2_y1wc1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gl3sl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ukxsf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h86v3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4fhpe"]
+
+[node name="Square" type="Button"]
+modulate = Color(0.82, 0.0738, 0.37228, 1)
+custom_minimum_size = Vector2(280, 280)
+size_flags_horizontal = 6
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gl3sl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_ukxsf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h86v3")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4fhpe")
+icon = ExtResource("1_3n3go")
+expand_icon = true
+script = ExtResource("2_y1wc1")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
